@@ -1,5 +1,5 @@
 # Git和github基本使用
-
+new
 
 ```
 找开源项目的一些途径
@@ -41,8 +41,11 @@ git commit -am "xxx"
 提交且修正上一次描述
 git commit --amend
 
-* 撤销暂存区文件修改（git add之后的, 未commit的文件）
+* 撤销工作区文件的编辑操作
 git checkout 文件名.后缀
+
+* 撤销暂存区文件提交（git add之后的, 未commit的文件，暂存区->工作区）
+git reset -- 文件名.后缀
 
 * 撤回当前仓库文件（git commit之后的文件, 仓库->暂存区）
 git reset HEAD^
