@@ -1,5 +1,4 @@
 # Git和github基本使用
-new
 
 ```
 找开源项目的一些途径
@@ -41,17 +40,18 @@ git commit -am "xxx"
 提交且修正上一次描述
 git commit --amend
 
-* 撤销工作区文件的编辑操作
+* 撤销工作区文件的编辑操作(所有文件.)
 git checkout 文件名.后缀
 
 * 撤销暂存区文件提交（git add之后的, 未commit的文件，暂存区->工作区）
-git reset -- 文件名.后缀
+git reset 文件名.后缀
 
 * 撤回当前仓库文件（git commit之后的文件, 仓库->暂存区）
 git reset HEAD^
 
-* 查看提交历史
+* 查看提交历史(默认显示最近一次修改，多次-n）
 git log --stat
+(q退出查看)
 
 * 查看分支
 git branch
@@ -65,8 +65,25 @@ git checkout -b 分支名
 git checkout 分支名
 * 合并分支（一般master/main下操作）
 git merge 分支名
+* 放弃当前合并(如遇太多冲突无法处理)
+git merge --abort
 * 删除分支（-D 强制删除）
 git branch -d 分支名
+
+[v大版本,功能添加号,bug修复号]
+标记版本(commit之后使用)
+git tag v1.0.0 (git tag显示存在的tag)
+* 本地推送所有tag到远程
+git push --tags
+删除版本
+git tag -d 版本号
+* 删除远程tag的
+git push origin --delete 版本号
+
+远程拉取到本地
+git pull
+本地推送到远程
+git push
 
 提交历史单行显示
 git log --pretty=oneline
