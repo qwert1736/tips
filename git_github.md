@@ -71,8 +71,10 @@ git merge --abort
 git branch -d 分支名
 
 [v大版本,功能添加号,bug修复号]
-标记版本(commit之后使用)
+* 标记版本(commit之后使用)
 git tag v1.0.0 (git tag显示存在的tag)
+本地推送指定tag到远程
+git push origin 版本号
 * 本地推送所有tag到远程
 git push --tags
 删除版本
@@ -102,6 +104,11 @@ git rm -f 文件名
 
 只删除仓库文件
 git rm --cached 文件名
+
+* 查看当前连接的远程仓库
+git remote -v
+删除当前连接的远程仓库
+git remote rm origin
 ```
 ### 本地新建项目
 ```

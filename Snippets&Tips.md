@@ -222,8 +222,37 @@ CSS中只能使用类名（不能是ID）。
 用一个例子来解释最好不过了。一个表示按钮的块默认有三个大小：小，中，大。为了避免创建三个不同的块，最好是在块上加修饰符。这个修饰符应该有个名字（比如：size ）和值（ small，normal 或者 big ）。
 
 ---
+## VueCLI4-Vue2配置ElementUI
+1. npm i element-ui -S
+2. npm install babel-plugin-component -D
+3. babel.config.js添加
+   ```js
+   module.exports = {
+      presets: [
+         '@vue/cli-plugin-babel/preset'
+      ],
+      "plugins": [
+         [
+            "component",
+            {
+            "libraryName": "element-ui",
+            "styleLibraryName": "theme-chalk"
+            }
+         ]
+      ]
+   }
+   ```
+4. main.js 添加 按需引入
+   ```js
+   import { Button, Message } from 'element-ui';
+
+   Vue.component(Button.name, Button);
+   Vue.prototype.$message = Message;
+   ```
+- 另一种配置是：vue add element 插件方式引入，版本可能比较旧
+---
 # TailwindCSS 配置
-### 原生
+### 原生_v2
 1. npm init -y
 2. npm install -D tailwindcss@2 postcss postcss-cli autoprefixer
 3. npx tailwindcss init -p
@@ -267,9 +296,9 @@ CSS中只能使用类名（不能是ID）。
       "build": "NODE_ENV=production postcss css/style.css -o dist/style.css"
    }
    ```
-![](img/2022-02-25-16-09-40.png)
+   ![](img/2022-02-25-16-09-40.png)
 ---
-# Vue-CLI-Vue3 配置tailwind 20220225
+# Vue-CLI-Vue3 配置tailwindcss_v2 20220225
 1. vue create [vue3App]
 2. npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 3. npx tailwindcss init -p 创建tailwind和postcss配置文件
@@ -312,6 +341,45 @@ CSS中只能使用类名（不能是ID）。
 3. App.vue测试组件
 
 ---
+## Tailwindcss_v3 postcss-cli配置
+1. npm init -y
+2. npm install -D tailwindcss postcss-cli autoprefixer
+3. npx tailwindcss init -p
+4. 配置tailwind.config.js
+   ```js
+   module.exports = {
+      content: ['./src/**/*.html'],
+      theme: {
+         extend: {},
+      },
+      plugins: [],
+   }
+   ```
+5. 根目录下创建tailwind.css
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+6. package.json添加script
+   npm i cross-env -S
+   ```
+   "dev": "TAILWIND_MODE=WATCH postcss tailwind.css -o ./layouts/css/style.css --watch --verbose",
+   "build": "NODE_ENV=production postcss tailwind.css -o ./layouts/css/style.css"
+   ```
+7. npm run dev
+8. npm i cssnano -D, postcss代码压缩插件
+9. postcss.config.js 生产环境、压缩代码配置
+   ```js
+   module.exports = {
+      plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+      ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
+      }
+   }
+   ```
+10. npm run build
 # vscode-markdown配置
 >参考视频：[bilibili](https://www.bilibili.com/video/BV1si4y1472o?from=search&seid=9129748802042065742)
 
