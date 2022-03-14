@@ -52,12 +52,26 @@ git reset HEAD^
 * 查看提交历史(默认显示最近一次修改，多次-n）
 git log --stat
 (q退出查看)
+* log单行显示
+git log --pretty=oneline
+* log单行简化显示
+git log --oneline
+
+* 删除操作（删了文件同时git add了该修改，等待git commit）
+git rm 文件名
+*重命名操作（同时git add了该修改，等待git commit）
+git mv 原文件名 新文件名
 
 * 查看分支
 git branch
-
+* 查看每个分支最后一次提交
+git branch -v
 创建分支(当前分支基础创建, -b亦是)
 git branch 分支名
+
+* 创建分支并且指向一个历史版本
+(通过hash,可配合git log --oneline）
+git brance 分支名 hash值
 
 * 创建并切换到该分支
 git checkout -b 分支名
@@ -86,9 +100,6 @@ git push origin --delete 版本号
 git pull
 本地推送到远程
 git push
-
-提交历史单行显示
-git log --pretty=oneline
 
 比较仓库和工作目录
 git diff
