@@ -62,6 +62,12 @@ git rm 文件名
 *重命名操作（同时git add了该修改，等待git commit）
 git mv 原文件名 新文件名
 
+*配置别名：git config --global alias.别名 原命令
+如：git config --global alias.st status
+使用：git st
+如：git config --global alias.logall "log --online --decorate --graph --all"
+使用：git logall (查看分叉历史)
+
 * 查看分支
 git branch
 * 查看每个分支最后一次提交

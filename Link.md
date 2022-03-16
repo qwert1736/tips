@@ -4,10 +4,14 @@
 - [git - 简易指南](https://www.bootcss.com/p/git-guide/)
 - [预编译器Sass文档](https://sass.bootcss.com/)
 - [ECMAScript 6](http://es6-features.org/#Constants) — New Features: Overview & Comparison
-- 
+- [js基础-React推荐-MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 - [vue.js官网](https://cn.vuejs.org/)
+- [vue.js](https://unpkg.com/browse/vue@3.2.31/dist/)-unpkg
+- [elementui官网](https://element.eleme.cn/#/zh-CN)
+- [react.js-unpkg](https://unpkg.com/browse/react@16.14.0/umd/)
+- [react-dom.js-unpkg](https://unpkg.com/browse/react-dom@16.14.0/umd/)
+- [babel.js-unpkg](https://unpkg.com/@babel/standalone@7.17.7/babel.min.js)
 
-)
 ---
 ## nb源码
 - 2021仿小米商城 https://github.com/xfan6/copy_mi
