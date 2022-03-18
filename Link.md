@@ -2,6 +2,7 @@
 - Web技术-CodingStartup[起码课-bilibili](https://space.bilibili.com/451368848/channel/series) 
 - [一份前端面试复习计划](https://juejin.cn/post/7061588533214969892)
 - [git - 简易指南](https://www.bootcss.com/p/git-guide/)
+- [代码随想录(算法)](https://www.programmercarl.com/)
 - [预编译器Sass文档](https://sass.bootcss.com/)
 - [ECMAScript 6](http://es6-features.org/#Constants) — New Features: Overview & Comparison
 - [js基础-React推荐-MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
