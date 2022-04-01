@@ -140,7 +140,7 @@ git push -u origin main
 
 ### 本地已有git项目
 ```
-git remote add origin git@github.com:qwert1736/xxx.git
+git remote add origin git@github.com:qwert1736/tips.git
 git branch -M main
 git push -u origin main
 ```
